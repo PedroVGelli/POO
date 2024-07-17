@@ -1,42 +1,30 @@
-<?php 
-class Celular{
-
-    public $marca;
-    public $tipocarregador;
-    public $fabricante;
-
-
-    public function utilizar(){
-
-        echo "Você está utilizando o $this->marca $this->fabricante";
-    }
-}
-    
-$meucelular = new Celular();
-
-$meucelular->marca = "Xiaomi";
-
-$meucelular->fabricante = "Redmi Note 13";
-echo "<br>";
-$meucelular->tipocarregador = "Seu carregador é tipo C ";
-
-
-$meucelular->utilizar();
-
-
-function consumo($capacidade, $corrente){
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Carros</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Celulares do Pedrinho</h1>
+    <form action="adicionar.php" method="POST">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required><br><br>
         
-        $valor = ($capacidade  / $corrente);
-        echo "<br>";
-        echo "A duração da bateria é de $valor amperes";
-
-
-    }
-
-   consumo(4000, 0.5);
-
-?>
-
-
-
-
+        <label for="fabricante">Fabricante:</label>
+        <input type="text" id="fabricante" name="fabricante" required><br><br>
+        
+        <label for="tipodecarregador">Tipo de carregador</label>
+        <input type="text" id="tipodecarregador" name="tipodecarregador" required><br><br>
+        
+    
+        
+        <input type="submit" value="Adicionar Celular">
+    </form>
+    <h2>Lista de Celulares</h2>
+    <div id="lista-celulares">
+        <?php include 'listacell.php'; ?>
+    </div>
+</body>
+</html>
