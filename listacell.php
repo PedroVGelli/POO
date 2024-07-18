@@ -1,8 +1,8 @@
 <?php
 require 'GerenciadorCelular.php';
 
-$gerenciadorCarros = new GerenciadorCelular();
-$telefone = $gerenciadorCarros->getcelular();
+$gerenciadorcelular = new gerenciadorcelular();
+$telefone = $gerenciadorcelular->getcelular();
 
 if (!empty($telefone)) {
     foreach ($telefone as $indice => $telefone) {

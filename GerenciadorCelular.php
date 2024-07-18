@@ -1,5 +1,5 @@
 <?php
-class GerenciadorCelular {
+class gerenciadorcelular {
     private $telefone = [];
     private $arquivo = 'dados.json';
 
@@ -11,7 +11,7 @@ class GerenciadorCelular {
     }
 
     public function adicionarCelular($celulares) {
-        $this->celular[] = [
+        $this->telefone[] = [
             'marca' => $celulares->getmarca(),
             'tipodecarregador' => $celulares->gettipodecarregador(),
             'fabricante' => $celulares->getfabricante(),

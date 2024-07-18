@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $modelo = $_POST['tipodecarregador'];
     $fabricante = $_POST['fabricante'];
 
-    $carro = new Carro($marca, $modelo, $ano, $cor);
+    $carro = new Celular($marca, $modelo, $ano, $cor);
 
     $GerenciadorCelular = new GerenciadorCelular();
     $GerenciadorCelular->adicionarCelular($celulares);
